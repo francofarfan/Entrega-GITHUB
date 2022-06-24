@@ -1,0 +1,202 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar{
+    grid-area: navbar;
+    display: flex;
+    flex-direction:row;
+    justify-content:center;
+    flex-wrap:wrap;
+}
+
+.logo{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.navbar ul{
+    display: flex;
+    align-items: center;
+}
+
+.navbar ul li{
+    padding: 10px;
+    list-style: none;
+}
+
+.remeraHomeImg{
+    width: 90%;
+}
+
+
+
+
+body{
+    background-color: rgb(255, 217, 217);
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
+h1{
+    color: black;
+}
+
+h3{
+    color: rgb(83, 83, 83)
+}
+
+h4{
+    color: rgb(83, 83, 83)
+}
+
+.navbar{
+    background-color: rgb(217, 217, 217);
+    height: auto;
+}
+
+footer{
+    background-color: rgb(217, 217, 217);
+}
+
+
+
+/* Grids & box modling  index*/
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: "navbar navbar navbar"
+                        "main main main"
+                        "footer footer footer"
+}
+.main{
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.footer{
+    grid-area: footer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.footer h4{
+    padding-left: 10px;
+}
+.form{
+    padding-right: 15px;
+}
+
+.main p{
+    padding: 20px;
+}
+
+
+nav ul li{
+    font-size: large
+    
+}
+
+@media(min-width:576px){
+    .logo{
+        width: 120px;
+        order:0;
+        height: 120px;
+    }
+    .navbar l:nth-child(1){
+    order: 1;
+    }
+    .navbar ul:nth-child(2){
+        order: -1;
+    }
+    .navbar{
+        align-items: center;
+        position: sticky;
+    }
+    .textBoxFooter{
+        width: 120px;
+    }
+    .navbar ul{
+        align-items: center;
+    }
+    .navbar ul li{
+        text-indent: 12px;
+        font-size: large;
+    }
+    h1{
+        font-size: 70px;
+    }
+    p{
+        font-size: 20px;
+    }
+}
+
+.footer{
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: center;
+    height: 85px;
+}
+.footer h4{
+    margin: 0;
+    order: -1;
+}
+
+.footer form{
+    width: 100px;
+    padding: 10px;
+}
+.textBoxFooter{
+    width: 100%;
+}
+
+/* Grids & box mdlng page/"Producto" */
+
+.imgProductos{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "main"
+                        "main"
+                        "main"
+}
+
+.mainProducto{
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mainProducto{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+@media(min-width:576px){
+    .mainProducto{
+        grid-area: main;
+        display: flex;
+        flex-direction:column;
+        align-items: center;
+    }
+
+    .imgProductos{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: "main main main"
+                            "main main main"
+                            "main main main"
+}
+}
